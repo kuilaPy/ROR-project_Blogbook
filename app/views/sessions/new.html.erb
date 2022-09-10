@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "log_in.css" %>
+
+<%= form_with url: log_in_path do |f| %>
+<div class="flex-container" style=" height: 550px" >
+<p style="position: absolute; top: 70px; color: #1d66f7 ; font-size: 50px ;font-weight: bold;">Blogbook</p>
+<div class="log_in_form" style="  padding: 20px;">  <p>Login to Blogbook </p>
+
+<%=f.text_field :email, placeholder: "Email"%>
+
+<%=f.password_field :password, placeholder: "password"%>
+ <span style="color:red; font-size: 14px;" ><%= alert %></span>
+<p>
+<%= f.submit 'Log In' %>
+</p>
+
+
+  <p style="font-size: 14px">
+  <%= link_to 'Sign up for Blogbook',sign_up_path%></p>
+</div>
+</div>
+<% end %>

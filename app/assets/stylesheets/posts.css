@@ -1,0 +1,44 @@
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0;
+    background-color: white;
+    border: white;
+    
+    
+    
+  }
+  .main_content{
+    border-radius: 10px ;
+    background-color: white;
+    border:  1px solid rgb(199, 195, 195);
+    margin: 10px;
+    
+  
+  }
+  
+  
+  .row.content {height: 100% }
+
+  
+  footer {
+    background-color: #1597E5;
+    color: rgb(245, 243, 243);
+    padding: 15px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+  .post_react_comment_share{
+      justify-content: space-around;
+  }
+  body{
+  background-color:  rgb(228, 233, 238);
+
+  box-shadow: 15px 15px 15px 15px rgb(228, 233, 238);
+}
+ 

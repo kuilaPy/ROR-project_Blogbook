@@ -1,0 +1,60 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    background-color: rgb(225, 229, 233);
+  }
+  
+  .log_in_form{
+    background-color: #f1f1f1;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgb(202, 209, 211);
+    width: 410px;
+    height: 660px;
+    font-size: large;
+    border-radius: 10px;
+  }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+  }
+
+input[type=submit] {
+  width: 200px;
+  height: 45px;
+  padding-left: 3%;
+  background-color: #29b824ee;
+  color: rgb(253, 252, 252);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0ddf4c;
+
+}
+a:hover {
+    text-decoration: underline;
+font-size: 14px;
+  }

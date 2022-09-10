@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag "sign_up.css" %>
+<%= form_with model: @user, url: sign_up_path do |f| %>
+<div class="flex-container"  style="height: 900px">
+<p style="position: absolute; top: 45px; color: #1d66f7 ; font-size: 45px ;font-weight: bold;">
+Blogbook
+</p>
+<div class="log_in_form" style="  padding: 20px;">   <p style="font-size: 25px; font-weight: bold">
+Creat a new account
+</p>
+    <h5>It's quick and easy.</h5>
+
+    <%= f.text_field :f_name , placeholder: "First Name"%>
+    <%= f.text_field :l_name  , placeholder: "Last Name"%>
+    <%= f.text_field :email  , placeholder: "Email"%>
+    <%= f.password_field :password  , placeholder: "Password"%>
+    <%= f.password_field :password_confirmation   , placeholder: "Confirm Password"%>
+    <%= f.text_field :date_of_birth  , placeholder: "Date Of Birth"%>
+    <%= f.text_field :gender  , placeholder: "Gender" %>
+    <p><%= f.submit 'Sign Up' %>
+    </p>
+
+  <p style="font-size: 14px">  <%= link_to 'Already have an account?',log_in_path%></>
+</div>
+</div>
+<% end %>
+
+
