@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "posts.css" %>
+<%= stylesheet_link_tag "post.css" %>
 
 <% content_for :page_title,  "Index" %>
 <nav class="navbar navbar-inverse">
@@ -37,6 +37,7 @@
       <span><%= link_to 'Share', post, method: :Delete, data: {confirm: "Are you sure ?"}%></span>
       </div>
       </div>
+      
       <% end %>
     </div>
     <div class="col-sm-4 ">
