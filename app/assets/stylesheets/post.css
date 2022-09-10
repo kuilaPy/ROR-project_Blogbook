@@ -6,16 +6,42 @@
     
     
     
+    
   }
   .main_content{
     border-radius: 10px ;
     background-color: white;
     border:  1px solid rgb(199, 195, 195);
     margin: 10px;
+    padding: 10px;
     
   
   }
+  .create_new_blog{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    height: 120px;
+    width: auto;
+    display: flex;
+   flex-direction: row;
+   padding: 15px;
   
+
+
+  }
+  
+ .example {
+  padding: 10px;
+  font-size: 13px;
+  width: 480px;
+  height: 40px;
+  background: #f1f1f1;
+  border-radius: 20px;
+
+  margin-left:8px ;
+}
+
   
   .row.content {height: 100% }
 

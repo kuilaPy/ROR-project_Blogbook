@@ -1,39 +1,27 @@
 <%= stylesheet_link_tag "post.css" %>
 
-<% content_for :page_title,  "Index" %>
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-  
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/posts"> 
-       <span style= "color: #1d66f7 ; font-size: 33px ;font-weight: bold;">Blogbook</span>
-       </a>
-    </div>
-    <div class="example" style ="position: absolute; left: 350px;
-    top: 10px;" > <%= image_tag('search.png' , :size =>'20x20', :alt =>'logo' ) %> search</div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-            <a href="/profile"> 
-              <%= image_tag('profile.png' , :size =>'30x30', :alt =>'logo' ) %> <span style= "color: #1d66f7 ; font-size: 20px ;"> Profile</span>
-              </a>
-          </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid ">    
+   
+<div class="container-fluid text-center">    
   <div class="row content">
+
+  <div>vgucvg</div>
     <div class="col-sm-3 ">
+    <p><%= @user.f_name %></p>
+    <p><%= @user.l_name %></p>
+    <p> <%= @user.email %></p>
+    <p><%= @user.date_of_birth %></p>
+    <p>  <%= @user.gender %></p>
+    
     </div>
 
     <div class="col-sm-5 text-left"> 
 
-
-      <div class="create_new_blog">
-      <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
+     <div class="create_new_blog">
+     <div></div>
+     <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
       <div class="example" > Whats your mind</div>
       
+
 
      </div>
 
@@ -66,8 +54,16 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+
+
+
+
+
+
+
+
+
+
+
 
 

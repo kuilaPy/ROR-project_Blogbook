@@ -1,0 +1,18 @@
+
+<%= form_with model: @comment, url: new_post_comment_path do |f| %>
+
+<div >
+
+     <p> <%= f.text_field :f_name , placeholder: "First Name"%></p>
+
+
+<p> <%= f.text_field :l_name  , placeholder: "Last Name"%></p>
+   
+    <p><%= f.submit 'Sign Up' %>
+    </p>
+
+  <p>  <%= link_to 'back to post',log_in_path%></>
+</div>
+
+<% end %>
+

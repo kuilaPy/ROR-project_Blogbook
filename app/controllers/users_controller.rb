@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def show
+    @user = User.find( session[:user_id])
+    @post =@user.posts
+  end
 
    def new
     @user = User.new
