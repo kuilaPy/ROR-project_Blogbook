@@ -2,39 +2,3 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  background-color: #1597E5;
-  
-  
-}
-
-.row.content {height: 100% }
-
-
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100% ;
-}
-
-footer {
-  background-color: #1597E5 !important;
-  color: rgb(87, 22, 22);
-  padding: 15px;
-}
-
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height:auto;} 
-}
-.post_react_comment_share{
-    justify-content: space-around;
-}
-body {
-background-color: aqua;
-border: 20px ;}

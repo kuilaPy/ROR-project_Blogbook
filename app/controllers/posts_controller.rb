@@ -1,25 +1,29 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   def index
-    @post = Post.all.order("created_at DESC")
+    @post = Post.all.order('created_at DESC')
+    @user = User.find_by(id: session[:user_id]) if session[:user_id]
   end
+
   def show
     @post = Post.find(params[:id])
   end
 
   def new
     @post = Post.new
+    @user = User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   def create
-    @post= Post.new(article_params)
-    @post.user =  User.find_by(id: session[:user_id]) if session[:user_id]
-    
+    @post = Post.new(article_params)
+    @post.user = User.find_by(id: session[:user_id]) if session[:user_id]
+
     if @post.save!
-      redirect_to root_path
+      redirect_to posts_path
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   def edit
@@ -37,13 +41,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post =Post.find(params[:id])
+    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end
 
   private
-    def article_params
-      params.require(:post).permit(:author, :description)
-    end
+
+  def article_params
+    params.require(:post).permit(:author, :description)
+  end
 end

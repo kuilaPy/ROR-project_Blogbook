@@ -1,0 +1,50 @@
+.comment_top_nav{
+    background-color:#3c6ac7;
+    height: 3em;
+    padding-left: 10px;
+    padding-top: 5px;
+
+
+}
+
+body{
+    background: rgb(225, 229, 233);
+}
+.brand{
+    font-size: large;
+    color: white;
+}
+.post_section{
+    background-color: white;
+    border-bottom:  0.5px solid rgb(192, 181, 181);
+    
+}
+.content_name_section{
+    padding: 15px;
+}
+.like_comment_share_section{
+    height: 4em;
+    padding: 5px;
+}
+.show_reats_count{
+    height: 2.5em;
+    border-top: 0.5px solid rgb(192, 181, 181);
+    border-bottom: 0.5px solid rgb(192, 181, 181);
+    background-color: white;
+    padding: 5px;
+}
+.show_comment_write_comment{
+   background-color: white;
+   padding: 15px;
+   
+
+
+}
+hr{
+    background-color: black;
+}
+input[type=submit]{
+    background-color: #3c6ac7;
+    border: none;
+    color: white;
+}

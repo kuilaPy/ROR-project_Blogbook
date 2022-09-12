@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag "post.css" %>
 
-<% content_for :page_title,  "Index" %>
+<% content_for :page_author,  "Index" %>
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid">
   
@@ -14,7 +14,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
             <a href="/profile"> 
-              <%= image_tag('profile.png' , :size =>'30x30', :alt =>'logo' ) %> <span style= "color: #1d66f7 ; font-size: 20px ;"> Profile</span>
+              <%= image_tag('profile.png' , :size =>'30x30', :alt =>'logo' ) %> 
+              <span style= "color: #1d66f7 ; font-size: 20px ;">
+              <%= @user.f_name%><%=" "%><%= @user.l_name%>
+              </span>
               </a>
           </li>
       </ul>
@@ -31,10 +34,18 @@
 
 
       <div class="create_new_blog">
-      <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
-      <div class="example" > Whats your mind</div>
+      <a href="/posts/new"><div style=" display: flex;
+      flex-direction: row;" > <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
+      <div class="example" > Whats your mind,<%= @user.f_name%>?</div></div></a>
       
+      <hr>
+      <div style="display: flex;
+      justify-content: space-around;">  
+      <div> <%= image_tag('live_video.png' , :size =>'30x30', :alt =>'logo' ) %></div> 
+      <div> <%= image_tag('photo_video.png' , :size =>'30x30', :alt =>'logo' ) %></div>
+      <div> <%= image_tag('feeling.png' , :size =>'30x30', :alt =>'logo' ) %></div>
 
+      </div>
      </div>
 
     
@@ -52,7 +63,7 @@
        border-top: 1px solid rgb(199, 195, 195);
       justify-content: space-between !important"> 
       <span><%= link_to 'Like',post%></span>
-      <span><%= link_to 'Comment',edit_post_path(post)%>
+      <span><%= link_to 'Comment',new_post_comment_path(post)%>
       </span>
       <span><%= link_to 'Share', post, method: :Delete, data: {confirm: "Are you sure ?"}%></span>
       </div>

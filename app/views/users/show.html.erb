@@ -1,40 +1,63 @@
-<%= stylesheet_link_tag "post.css" %>
+<%= stylesheet_link_tag "show_profile.css" %>
 
    
+<div  class="profile_header" > <%= image_tag('profile.png' , :size =>'90x90', :alt =>'logo' ) %>    
+ <span class="user_name"> <%= @user.f_name %>
+<%= @user.l_name %>
+</span> 
+ <a  class="btn btn-info btn-lg" style =" position: absolute;
+ left: 91.8%;
+ top: 10%;>
+<%= link_to 'Log Out', log_out_path, method: :Delete, data: {confirm: "log out from Blogbook?"}%>
+</a> 
+</div>
+
+
+
 <div class="container-fluid text-center">    
   <div class="row content">
+    <h4> Posts </h4>
+<div class="col-sm-4">
+<div class="log_in_form" style="  padding: 20px;"> 
+<form>
+   
+    
+  
+    <div class="user_deatials_show">  <%= image_tag('email.png' , :size =>'30x30', :alt =>'logo' ) %><%="  "%><%= @user.email %></div>
+    <div class="user_deatials_show">  <%= image_tag('date_of_birth.png' , :size =>'20x20', :alt =>'logo' ) %><%="   "%><%= @user.date_of_birth %>  </div>
+    <div class="user_deatials_show">  <%= image_tag('gender.png' , :size =>'30x30', :alt =>'logo' ) %> <%= @user.gender %> </div>
+    
 
-  <div>vgucvg</div>
-    <div class="col-sm-3 ">
-    <p><%= @user.f_name %></p>
-    <p><%= @user.l_name %></p>
-    <p> <%= @user.email %></p>
-    <p><%= @user.date_of_birth %></p>
-    <p>  <%= @user.gender %></p>
+</form>
+
+</div>
     
     </div>
 
     <div class="col-sm-5 text-left"> 
-
-     <div class="create_new_blog">
-     <div></div>
-     <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
-      <div class="example" > Whats your mind</div>
-      
-
-
-     </div>
-
+    <div class="create_new_blog">
+    <a href="/posts/new"><div style=" display: flex;
+    flex-direction: row;" > <div  style="height:40px" > <%= image_tag('profile.png' , :size =>'40x40', :alt =>'logo' ) %></div> 
+    <div class="example" > Whats your mind,<%= @user.f_name%>?</div></div></a>
     
+    <hr>
+    <div style="display: flex;
+    justify-content: space-around;">  
+    <div> <%= image_tag('live_video.png' , :size =>'30x30', :alt =>'logo' ) %></div> 
+    <div> <%= image_tag('photo_video.png' , :size =>'30x30', :alt =>'logo' ) %></div>
+    <div> <%= image_tag('feeling.png' , :size =>'30x30', :alt =>'logo' ) %></div>
+
+    </div>
+   </div>
+
+
     <% @post.each do |post| %>  
       <div class ="main_content">
-      <h4 style=" padding: 3px 0px 0px 15px;"> <%= link_to post.author, post  %> </h4>
+      <h5 style=" padding: 3px 0px 0px 15px;"> <%= link_to post.author, post  %> </h5>
       <p style=" border-top: 1px solid rgb(199, 195, 195); padding: 10px;"><%= post.description %></p>
       <div  style=" padding: 10px;">
        <%= post.comments.count %>
       </div>
-
-    
       <div  style=" display: flex; 
        padding: 10px  50px 15px 50px;
        border-top: 1px solid rgb(199, 195, 195);
@@ -48,7 +71,7 @@
       
       <% end %>
     </div>
-    <div class="col-sm-4 ">
+    <div class="col-sm-3">
     </div>
     
   </div>

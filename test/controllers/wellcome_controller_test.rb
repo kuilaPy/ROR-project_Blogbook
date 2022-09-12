@@ -1,8 +1,10 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class WellcomeControllerTest < ActionDispatch::IntegrationTest
-  test "should get :index" do
-    get wellcome_:index_url
+  test 'should get :index' do
+    get wellcome_: index_url
     assert_response :success
   end
 end

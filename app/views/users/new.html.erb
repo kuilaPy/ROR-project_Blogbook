@@ -14,8 +14,8 @@ Creat a new account
     <%= f.text_field :email  , placeholder: "Email"%>
     <%= f.password_field :password  , placeholder: "Password"%>
     <%= f.password_field :password_confirmation   , placeholder: "Confirm Password"%>
-    <%= f.text_field :date_of_birth  , placeholder: "Date Of Birth"%>
-    <%= f.text_field :gender  , placeholder: "Gender" %>
+    <%= f.date_field :date_of_birth  %>
+    <%= f.select :gender, ["Male", "Female", "Custom"]  %>
     <p><%= f.submit 'Sign Up' %>
     </p>
 

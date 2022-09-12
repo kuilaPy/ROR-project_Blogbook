@@ -1,0 +1,91 @@
+
+
+
+body{
+    background-color:  rgb(239, 244, 248);
+    
+}
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0;
+    background-color: white;
+    border: white;
+    
+}
+.main_content{
+    border-radius: 10px  ;
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px 5px rgb(236, 239, 240);
+}
+.example {
+    padding: 10px;
+    font-size: 13px;
+    width: 480px;
+    height: 40px;
+    background: #f1f1f1;
+    border-radius: 20px;
+  
+    margin-left:8px ;
+  }
+  .create_new_blog{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    height: 140px;
+    width: auto;
+   padding: 15px;
+  
+
+
+  }
+  
+  .profile_header{
+    height: 120px;
+    padding: 20px 0px 0px 15px;
+    background-color:whitesmoke;
+    border-bottom: 0.5px solid rgb(202, 198, 198);
+    box-shadow: 5px 5px 5px 5px rgb(229, 233, 235);
+
+
+}
+.btn btn-info btn-lg{
+    text-decoration-color: white !important;
+
+}
+.user_name{
+    
+    position: absolute;
+  top: 5%;
+  left: 120px;
+  font-size:xx-large;
+}
+.log_in_form{
+    background-color: white;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgb(233, 237, 238);
+    width: 400px;
+    height: 320px;
+    font-size: large;
+    border-radius: 10px;
+    margin-top: 10px;
+
+  }
+
+  .user_deatials_show {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    text-align: left;
+  }
+  h4{
+ font-family: fantasy;
+ text-decoration: underline blue;
+ 
+
+}

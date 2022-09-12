@@ -1,18 +1,19 @@
 
-<h1>Blogbook</h1>
+<%= stylesheet_link_tag "new_post.css" %>
+
 <%= form_with model: @post  do |f| %>
-    <p>
-  <%= f.label 'author' %><br>
-  <%= f.text_field :author %>
-  </p>
-  <p>
-  <%= f.label 'description' %><br>
-  <%= f.text_area :description %>
-  
-  
-  <p>
-  <%= f.submit %>
-  </p>
+<div class="flex-container" style=" height: 550px" >
+<div class="log_in_form" style="  padding: 20px;">  <h3>Create Post</h3>
+<hr>
+<p style=" text-align: left;"> <%= image_tag('profile.png' , :size =>'20x20', :alt =>'logo' ) %><%=" "%><%= @user.f_name%><%=" "%><%= @user.l_name%></p>
+<p>
+<%= f.text_field :author , placeholder: "author"%>
+</p>
+<p >
+<%= f.text_area :description , size: "42x6", placeholder: "Typing..." %>
+<p>
+<%= f.submit  %>
+</p>
+</div>
+</div>
 <% end %>
-
-

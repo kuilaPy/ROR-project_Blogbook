@@ -1,18 +1,73 @@
+<%= stylesheet_link_tag "comment.css" %>
 
-<%= form_with model: @comment, url: new_post_comment_path do |f| %>
+<div class="container">
+<div class="row"> 
+<div class="col-md-3"></div>
+<div class="col-md-6">
 
-<div >
+<div class="post_section">
+<div class="comment_top_nav">
+<a  href ="/posts" class="brand">Blogbook</a> 
 
-     <p> <%= f.text_field :f_name , placeholder: "First Name"%></p>
-
-
-<p> <%= f.text_field :l_name  , placeholder: "Last Name"%></p>
-   
-    <p><%= f.submit 'Sign Up' %>
-    </p>
-
-  <p>  <%= link_to 'back to post',log_in_path%></>
+</div>
+<div class="content_name_section">
+<h5><%= @post.author %></h5>
+<p><%= @post.description %></p>
 </div>
 
+</div>
+ 
+<div class="like_comment_share_section">
+<div style="display: flex;
+      justify-content: space-around;">  
+      <div> <%= image_tag('like2.png' , :size =>'20x20', :alt =>'logo' ) %> <p>like</p> </div> 
+      <div> <%= image_tag('feeling3.png' , :size =>'20x20', :alt =>'logo' ) %> <p>feeling</p> </div> 
+      <div> <%= image_tag('comment2.png' , :size =>'20x20', :alt =>'logo' ) %> <p>comment</p> </div> 
+      <div> <%= image_tag('share2.png' , :size =>'20x20', :alt =>'logo' ) %> <p>share</p> </div> 
+     
+      </div>
+
+  </div>
+<div class="show_reats_count">
+<%= image_tag('like3.png' , :size =>'20x20', :alt =>'logo' ) %>
+<%= image_tag('love.png' , :size =>'20x20', :alt =>'logo' ) %>
+ <%= image_tag('wow.png' , :size =>'20x20', :alt =>'logo' ) %> 
+
+</div>
+  <div class="show_comment_write_comment">
+  
+
+   <% @post.comments.each do |comment| %>
+    <a>
+    <%= comment.name %>
+  </a>
+
+  <p>
+    <%= comment.comment %>
+  </p>
 <% end %>
+<hr>
+
+<%= form_with model: [ @post, @post.comments.build ] do |form| %>
+  Write Name
+  <p>
+    <%= form.text_field :name %>
+  </p>
+  write comment....
+  <p>
+    <%= form.text_area :comment , size: "52x3"%>
+       <%= form.submit "comment" %>
+    </p>
+<% end %>
+<hr>
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+
+
 
